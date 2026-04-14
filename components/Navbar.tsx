@@ -12,20 +12,14 @@ export default function Navbar() {
   return (
     <header className="border-b border-slate-200 bg-white">
       <div className="mx-auto flex w-full max-w-[1360px] items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/home" className="flex items-center text-[28px] font-extrabold tracking-tight text-[#2f86ff]">
-          <img
-            src="/doctorimages/logo.svg"
-            alt="DOCCURE"
-            className="h-10 w-auto object-contain"
-          />
-        </Link>
+      
 
         <nav className="items-center gap-6 text-sm font-medium text-slate-700 lg:flex">
           {navItems.map((item, index) => (
             <Link
               key={item}
               href={index === 0 ? "/home" : "#"}
-              className={`relative transition after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:bg-[#2f86ff] after:transition-all after:duration-300 after:content-[''] ${index === 0 ? "text-[#2f86ff] after:w-full" : "after:w-0 hover:text-slate-950 hover:after:w-full"}`}
+              className={`relative transition after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:bg-[#2f86ff] after:transition-all after:duration-300${index === 0 ? "text-[#2f86ff] after:w-full" : "after:w-0 hover:text-slate-950 hover:after:w-full"}`}
             >
               {item}
               {index < navItems.length - 1 ? <span className="ml-1 text-slate-400"></span> : null}
@@ -33,16 +27,14 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex justify-end items-center gap-1">
           <Link href="/contact" className="hidden inline-flex items-center justify-center whitespace-nowrap rounded-full bg-[#2f86ff] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#1a6be8] hover:scale-105 sm:inline-flex">
             Sign Up
           </Link>
-          <Link href="/contact" className="hidden inline-flex items-center justify-center whitespace-nowrap rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-slate-800 hover:scale-105 sm:inline-flex">
+          <Link href="/contact" className=" inline-flex items-center justify-center whitespace-nowrap rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-slate-800 hover:scale-105 sm:inline-flex">
             Register
           </Link>
-          <button className="hidden h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 transition-colors hover:bg-slate-50 lg:flex" aria-label="More options">
-            <span className="text-lg font-bold tracking-wide">...</span>
-          </button>
+          
           <button
             type="button"
             className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 transition-colors hover:bg-slate-50 lg:hidden"

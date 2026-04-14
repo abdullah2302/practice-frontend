@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import type { IconType } from "react-icons";
 
-const SocialIcon = ({ Icon }: { Icon: IconType }) => <Icon className="h-4 w-4" aria-hidden="true" />;
+const SocialIcon = ({ Icon }: { Icon: IconType }) => <Icon className="h-10 w-5" aria-hidden="true" />;
 
 export default function Header() {
   return (
@@ -19,13 +19,13 @@ export default function Header() {
 
           <div className="flex w-full items-center justify-center gap-2 sm:w-auto sm:justify-end sm:gap-3">
             <details className="relative hidden md:block">
-              <summary className="flex cursor-pointer list-none items-center gap-2 rounded-full border border-slate-200 px-2.5 py-1 text-[11px] font-semibold text-slate-700 transition-colors hover:border-[#2f86ff] hover:text-[#2f86ff]">
+              <summary className="flex  list-none items-center gap-2 s px-2.5 py-1 text-[11px] font-semibold text-slate-700 transition-colors hover:border-[#2f86ff] hover:text-[#2f86ff]">
                 <span className="text-sm leading-none">🇺🇸</span>
                 English
                 <span className="text-[10px] leading-none text-slate-400">▾</span>
               </summary>
 
-              <div className="absolute right-0 top-full z-20 mt-2 w-44 overflow-hidden rounded-2xl border border-slate-200 bg-white p-1 shadow-[0_18px_40px_rgba(15,23,42,0.12)]">
+              <div className=" z-20 mt-2 w-44  rounded-2xl border border-slate-200 bg-white p-1 shadow-[0_18px_40px_rgba(15,23,42,0.12)]">
                 <button type="button" className="flex w-full items-center gap-2 rounded-xl px-3 py-2 text-left text-[11px] font-semibold text-slate-700 transition-colors hover:bg-slate-50 hover:text-[#2f86ff]">
                   <span className="text-sm leading-none">🇺🇸</span>
                   English
