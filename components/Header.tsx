@@ -9,20 +9,20 @@ export default function Header() {
     <div className=" top-0 z-50 bg-white">
       <section className="hidden border-b border-slate-200 bg-white md:block">
         <div className=" flex w-full max-w-[1360px] flex-col gap-2 px-4 py-2 text-[11px] text-slate-600 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-          <div className="flex w-full flex-wrap items-center justify-center gap-x-4 gap-y-1 sm:w-auto sm:justify-start">
-            <span className="flex items-center gap-1.5">
-              <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-slate-900 text-[9px] text-white">i</span>
+          <div className=" w-full items-center justify-center gap-x-4 gap-y-1 sm:w-auto sm:justify-start">
+            <span className="flex items-center gap-3">
+              <span className="inline-flex  items-center rounded-full bg-slate-900 text-[9px] text-white">i</span>
               info@example.com
             </span>
             <span className="flex items-center gap-1.5">+1 66589 14556</span>
           </div>
 
           <div className="flex w-full items-center justify-center gap-2 sm:w-auto sm:justify-end sm:gap-3">
-            <details className="relative hidden md:block">
-              <summary className="flex  list-none items-center gap-2 s px-2.5 py-1 text-[11px] font-semibold text-slate-700 transition-colors hover:border-[#2f86ff] hover:text-[#2f86ff]">
+            <details className=" md:block text-center">
+              <summary className="  list-none  gap-2 s px-2.5 py-1 text-[11px] font-semibold text-slate-700 transition-colors hover:border-[#2f86ff] hover:text-[#2f86ff]">
                 <span className="text-sm leading-none">🇺🇸</span>
                 English
-                <span className="text-[10px] leading-none text-slate-400">▾</span>
+                <span className="text-[10px]  text-slate-400">▾</span>
               </summary>
 
               <div className=" z-20 mt-2 w-44  rounded-2xl border border-slate-200 bg-white p-1 shadow-[0_18px_40px_rgba(15,23,42,0.12)]">
