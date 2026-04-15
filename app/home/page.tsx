@@ -8,8 +8,8 @@ export default function Home() {
     <main className="min-h-screen bg-white text-slate-900 pointer-events-none ">
       
       <HeroSection />
-      
         <SpecialSection />
+        <SocialStrip />
     </main>
   )
 }
