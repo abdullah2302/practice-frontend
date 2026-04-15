@@ -108,15 +108,7 @@ export default function HeroSection() {
               <div className="max-w-3xl space-y-2 sm:space-y-3 md:space-y-4">
                 <h1 className="text-xl font-bold leading-tight text-center sm:text-left sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
                   Discover Health: Find Your Trusted
-                  <span className="relative inline-block h-6 w-6 mx-1 sm:h-7 sm:w-7 md:h-8 md:w-8 lg:h-9 lg:w-9 align-middle">
-                    <Image
-                      src="/doctorimages/video.svg"
-                      alt="Video call"
-                      height={600}
-                      width={800}
-                      className="object-contain"
-                    />
-                  </span>
+                  
                   Doctors Today
                 </h1>
               </div>

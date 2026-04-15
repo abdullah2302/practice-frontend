@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
-
+import Image from "next/image";
 const navItems = ["Home", "Doctors", "Patients", "Pharmacy", "Pages", "Blog", "Admin"];
 
 export default function Navbar() {
@@ -12,10 +12,12 @@ export default function Navbar() {
   return (
     <header className="border-b border-slate-10000 bg-white">
       <div className="mx-auto flex w-full max-w-[1360px] items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/home" className="flex items-center text-[28px] font-extrabold tracking-tight text-[#2f86ff]">
-          <img
-            src="/doctorimages/logo.svg"
+        <Link href="/home" className="flex items-center text-[28px] font-extrabold  text-[#2f86ff]">
+          <Image
+            src=""
             alt="DOCCURE"
+            height={40}
+            width={160}
             className="h-10 w-auto object-contain"
           />
         </Link>
