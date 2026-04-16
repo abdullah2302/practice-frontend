@@ -14,7 +14,7 @@ export default function Navbar() {
       <div className="mx-auto flex w-full max-w-[1360px] items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/home" className="flex items-center text-[28px] font-extrabold  text-[#2f86ff]">
           <Image
-            src=""
+            src="doctureimages/logo.svg"
             alt="DOCCURE"
             height={40}
             width={160}

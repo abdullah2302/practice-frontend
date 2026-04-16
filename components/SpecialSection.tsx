@@ -68,7 +68,7 @@ function SpecialtyIcon({ name, className }: { name: string; className?: string }
 }
 
 export default function TopSpecialtiesSection() {
-  const marqueeCards = [...specialtyCards, ...specialtyCards];
+  const marqueeCards = [...specialtyCards];
 
   return (
     <section className="bg-white py-14 lg:py-16 flex ">
@@ -83,13 +83,13 @@ export default function TopSpecialtiesSection() {
           </div>
 
           <h2 className="mt-4 text-center text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-            Highlighting the <span className="text-[#2f86ff]">Care &amp; Support</span>
+            Highlighting the <span className="text-[#2f86ff]">Care & Support</span>
           </h2>
 
           <div className="relative mt-8 lg:mt-10">
             
             <div className="overflow-hidden ">
-              <div className="flex w-max gap-4 sm:gap-5">
+              <div className="flex   gap-4 sm:gap-5 ">
                 {marqueeCards.map((card, idx) => (
                   <article
                     key={`${card.name}-${idx}`}
