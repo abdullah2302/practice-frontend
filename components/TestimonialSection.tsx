@@ -10,7 +10,7 @@ const testimonials = [
     title: "Nice Treatment",
     description: "I had a wonderful experience the staff was friendly and attentive, and Dr. Smith took the time to explain everything clearly.",
     image: "/doctorimages/patient22.webp",
-    rating: 5,
+   
   },
   {
     name: "Brooks Steave",
@@ -18,7 +18,7 @@ const testimonials = [
     title: "Nice Support",
     description: "My experience was excellent. The staff was polite and attentive, and the doctor took the time to explain every step clearly.",
     image: "/doctorimages/patient2.webp",
-    rating: 5,
+    
   },
   {
     name: "Sofia Doe",
@@ -26,7 +26,7 @@ const testimonials = [
     title: "Excellent Service",
     description: "I had a wonderful experience the staff was friendly and attentive, and Dr. Smith took the time to explain everything clearly.",
     image: "/doctorimages/patient23.webp",
-    rating: 5,
+    
   },
   {
     name: "Johnson DWayne",
@@ -34,7 +34,7 @@ const testimonials = [
     title: "Good Hospitability",
     description: "Genuinely cares about his patients. He helped me understand my condition and worked with me to create a plan.",
     image: "/doctorimages/patient21.webp",
-    rating: 5,
+   
   },
 ];
 
@@ -83,19 +83,7 @@ export default function TestimonialsSection() {
                 <div className="testimonials-item group relative z-10 h-full rounded-2xl border border-slate-100 bg-white p-6 shadow-sm hover:border-[#2f86ff] hover:bg-[#2f86ff] hover:shadow-xl transition-all duration-300">
                   <div className="testimonials-info">
                   
-                    <div className="review-star mb-4 flex items-center justify-between">
-                      <div className="rating flex gap-1">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className="h-4 w-4 fill-amber-400 text-amber-400"
-                          />
-                        ))}
-                      </div>
-                      <span className="text-[#2f86ff] group-hover:text-white transition-colors duration-300">
-                        <Quote className="h-6 w-6" />
-                      </span>
-                    </div>
+                    
 
                     
                     <div className="testimonial-content">
