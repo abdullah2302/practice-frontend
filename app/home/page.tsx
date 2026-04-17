@@ -6,18 +6,27 @@ import DocFeatured from '@/components/DocFeatured'
 import ReasonSection from '@/components/ReasonSection'
 import ServicesSection from '@/components/ServicesSection'
 import FAQSection from '@/components/FaqSection'
+import BookWithUs from '@/components/BookusSection'
+import TestimonialSection from '@/components/TestimonialSection'
+import CompanySection from '@/components/CompanySection'
+import ArticleSection from '@/components/ArticleSection'
 import Footer from '@/components/Footer'
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-slate-900 pointer-events-none ">
-      
+    <main className="h-screen bg-white text-slate-900 pointer-events-none ">
+     
       <HeroSection />
-        <SpecialSection />
-        <DocFeatured />
-          <ServicesSection />
-        <ReasonSection />
+      <SpecialSection />
+      <DocFeatured />
+      
+      <ReasonSection />
+
+      
       <FAQSection />
-        <Footer />
+      <TestimonialSection />
+      <CompanySection />
+      <ArticleSection />
+      <Footer />
     </main>
   )
 }

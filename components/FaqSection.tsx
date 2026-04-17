@@ -35,63 +35,59 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="faq-section-one relative overflow-hidden bg-white py-16 md:py-20 lg:py-24">
-      <div className="mx-auto w-full max-w-[1360px] px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-12 md:py-16">
+      <div className="mx-auto max-w-6xl px-4">
+        
         <div className="text-center">
-          <div className="flex justify-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[linear-gradient(90deg,#2f86ff,#17b5f6)] px-4 py-1.5 text-[10px] sm:text-[11px] font-semibold text-white">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-white" />
-              FAQ'S
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-white" />
-            </span>
-          </div>
-          <h2 className="section-title mt-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-            Your Questions are <span className="text-[#2f86ff]">Answered</span>
+          <span className="inline-block rounded-full bg-blue-500 px-4 py-1 text-xs font-semibold text-white">
+            FAQ'S
+          </span>
+          <h2 className="mt-4 text-2xl font-bold text-slate-900 md:text-3xl">
+            Your Questions are <span className="text-blue-500">Answered</span>
           </h2>
         </div>
 
-        <div className="mx-auto mt-12 max-w-4xl">
-          <div className="faq-info space-y-3">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="faq-item rounded-xl border border-slate-200 bg-white transition-all duration-300 hover:shadow-md"
+        
+        <div className="mt-8 space-y-3 md:mt-10">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="rounded-lg border border-slate-200 bg-white"
+            >
+              <button
+                onClick={() => toggleFaq(index)}
+                className="flex w-full items-center justify-between px-4 py-3 text-left md:px-5 md:py-4"
               >
-                <button
-                  onClick={() => toggleFaq(index)}
-                  className="flex w-full items-center justify-between px-5 py-4 text-left transition-colors hover:bg-slate-50 rounded-xl"
-                >
-                  <span className="text-base font-semibold text-slate-900 md:text-lg">
-                    {faq.question}
-                  </span>
-                  <ChevronDown
-                    className={`h-5 w-5 text-[#2f86ff] transition-transform duration-300 ${
-                      openIndex === index ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
+                <span className="text-sm font-semibold text-slate-900 md:text-base">
+                  {faq.question}
+                </span>
+                <ChevronDown
+                  className={`h-4 w-4 text-blue-500 transition-transform duration-300 md:h-5 md:w-5 ${
+                    openIndex === index ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
 
-                <div
-                  ref={(el) => {
-                    contentRefs.current[index] = el;
-                  }}
-                  style={{
-                    maxHeight:
-                      openIndex === index
-                        ? contentRefs.current[index]?.scrollHeight + "px"
-                        : "0px",
-                  }}
-                  className="overflow-hidden transition-all duration-300 ease-in-out"
-                >
-                  <div className="border-t border-slate-100 px-5 pb-5 pt-3">
-                    <p className="text-sm leading-relaxed text-slate-600 md:text-base">
-                      {faq.answer}
-                    </p>
-                  </div>
+              <div
+                ref={(el) => {
+                  contentRefs.current[index] = el;
+                }}
+                style={{
+                  maxHeight:
+                    openIndex === index
+                      ? contentRefs.current[index]?.scrollHeight + "px"
+                      : "0px",
+                }}
+                className="overflow-hidden transition-all duration-300"
+              >
+                <div className="border-t border-slate-100 px-4 pb-4 pt-2 md:px-5 md:pb-5">
+                  <p className="text-sm text-slate-600">
+                    {faq.answer}
+                  </p>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

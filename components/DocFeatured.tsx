@@ -121,7 +121,7 @@ export default function FeaturedDoctorsSection() {
       behavior: 'smooth',
     });
 
-    // Keep arrow disabled state in sync after smooth scrolling.
+  
     requestAnimationFrame(checkScrollability);
     setTimeout(checkScrollability, 260);
   };
@@ -194,20 +194,20 @@ export default function FeaturedDoctorsSection() {
               msOverflowStyle: 'none',
             }}
           >
-            <div className="flex gap-5 md:gap-6 px-1">
+            <div className="gap-4 grid gap-6 sm:grid-cols-4 lg:grid-cols-3 lg:gap-8">
               {doctorCards.map((doctor) => (
                 <article
                   key={doctor.name}
-                  className="w-[280px] sm:w-[300px] md:w-[320px] flex-shrink-0 snap-start rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all flex flex-col"
+                  className="w-[84vw] max-w-[280px] sm:w-[300px] md:w-[320px] lg:w-[340px] flex-shrink-0 snap-start rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all flex flex-col"
                 >
-                  <div className="relative horizontal-slide h-40 sm:h-44 md:h-48 w-full overflow-hidden rounded-t-2xl bg-gradient-to-br from-[#ebf3ff] to-[#dcecff]">
+                  <div className="relative h-40 sm:h-44 md:h-48 w-full overflow-hidden rounded-t-2xl bg-gradient-to-br from-[#ebf3ff] to-[#dcecff]">
                     <Image
                       src={doctor.image}
                       alt={doctor.name}
                       fill
                       sizes="(max-width: 640px) 280px, (max-width: 768px) 300px, 320px"
                       quality={85}
-                      className="h-full object-cover object-top"
+                      className="h-full "
                     />
 
                     <div className="absolute left-3 top-3 bg-amber-500 px-2.5 py-0.5 rounded-md text-[10px] font-bold text-white flex items-center gap-0.5">

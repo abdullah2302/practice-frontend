@@ -46,7 +46,7 @@ export default function WhyBookWithUs() {
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-3 lg:grid-cols-3 lg:gap-8">
+        <div className="mt-12 grid gap-6 sm:flex sm:flex-col lg:grid-cols-3 lg:gap-8">
           {reasons.map((reason, index) => {
             const Icon = reason.icon;
             return (

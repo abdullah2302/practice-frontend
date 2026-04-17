@@ -1,3 +1,4 @@
+'use client';
 import Navbar from "./Navbar";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import type { IconType } from "react-icons";

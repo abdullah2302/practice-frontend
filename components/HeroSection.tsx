@@ -17,6 +17,7 @@ import Link from 'next/link';
 export default function HeroSection() {
   const [isSpecialtyOpen, setIsSpecialtyOpen] = useState(false);
   const [selectedSpecialty, setSelectedSpecialty] = useState("Select Speciality");
+  const[search,setSearch] = useState("");
 
   const specialties = [
     "Cardiology",
@@ -41,7 +42,7 @@ export default function HeroSection() {
     <>
       <section className="relative overflow-hidden bg-gradient-to-b from-blue-700 via-blue-600 to-blue-400 text-white">
         
-        <div className="pointer-events-none absolute right-0 top-0 z-[1] hidden lg:block">
+        <div className=" absolute right-0 top-0 z-[1] hidden lg:block">
           <div className="relative h-24 w-auto sm:h-32 md:h-48 lg:h-96 xl:h-[40rem]">
             <Image
               src="/doctorimages/banner-element-02.webp"
@@ -53,7 +54,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="pointer-events-none absolute bottom-0 left-0 z-0 hidden lg:block">
+        <div className=" absolute bottom-0 left-0 z-0 hidden lg:block">
           <div className="relative h-16 w-auto sm:h-20 md:h-28 lg:h-60 xl:h-80">
             <Image
               src="/doctorimages/banner-element-01.webp"
@@ -151,14 +152,16 @@ export default function HeroSection() {
                     )}
                   </div>
 
-                  <label className="flex flex-1 items-center gap-2 px-4 py-3 text-xs text-slate-400 sm:px-5 sm:py-4 sm:text-sm">
-                    <span className="text-sm sm:text-base">⌕</span>
-                    <input
-                      type="text"
-                      placeholder="Search for Medical Procedures, hospitals"
-                      className="w-full bg-transparent outline-none text-slate-700 placeholder:text-slate-400 text-xs sm:text-sm"
-                    />
-                  </label>
+                  <div className="flex flex-1 items-center gap-2 px-4 py-3 relative z-20">
+  <span className="text-sm sm:text-base">⌕</span>
+  <input
+    type="text"
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+    placeholder="Search for Medical Procedures, hospitals"
+    className="w-full bg-transparent outline-none text-slate-700 placeholder:text-slate-400 text-xs sm:text-sm"
+  />
+</div>
 
                   <button className="mx-3 mb-3 rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 sm:mx-2 sm:my-2 sm:rounded-full sm:px-6 sm:py-2.5 md:px-7">
                     Search
